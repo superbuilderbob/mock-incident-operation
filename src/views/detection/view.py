@@ -8,7 +8,7 @@ class View:
         self.assess_alert_all_checked = False
 
     def header_detection(self):
-        st.header("1. Detection Stage")
+        st.header("1. Detection Stage.")
 
     def subheader_discover_alert(self):
         st.subheader("1.1 Discover Alert")
