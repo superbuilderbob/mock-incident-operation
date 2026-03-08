@@ -52,7 +52,7 @@ class View:
                 checked_options.append(is_checked)
         else:
             is_ack_checked = st.checkbox(
-                "Acknowledge the alert/issue/tag", key=f"step_acknowledge"
+                "Acknowledge the alert/issue/tag", key="step_acknowledge"
             )
             checked_options.append(is_ack_checked)
 
@@ -64,7 +64,7 @@ class View:
                     )
                 checked_options.append(is_checked)
 
-        if not False in checked_options:
+        if False not in checked_options:
             self.assess_alert_all_checked = True
 
     def step_determine_partner_impact(self):
@@ -99,7 +99,7 @@ class View:
             if "incident" in self.alert_origin and "Unsure" in self.partner_impact:
                 st.warning("Clarify partner impact with incident manager", icon="⚠️")
 
-            if not "incident" in self.alert_origin and "Unsure" in self.partner_impact:
+            if "incident" not in self.alert_origin and "Unsure" in self.partner_impact:
                 st.warning(
                     "Reach out to partner technical contact to clarify impact", icon="⚠️"
                 )
