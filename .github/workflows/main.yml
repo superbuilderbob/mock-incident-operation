@@ -1,7 +1,7 @@
 name: Checkout & Lint Streamlit app
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
